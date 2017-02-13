@@ -7,7 +7,7 @@ var words = [
 	"armen",
 	"actie",
 	"apart",
-	"blitz",
+	"bleek",
 	"adres",
 	"avond",
 	"aders",
