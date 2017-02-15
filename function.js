@@ -47,6 +47,7 @@ function onClick(){
 	//checkCorrectAnswer(firstFirstId, firstSecondId, firstThirdId, firstFourthId, firstFifthId)
 	poging ++;
 	console.log(firstFirstId);
+	checkCorrectAnswer();
 }
 
 
@@ -73,7 +74,17 @@ function disableRow(firstRow, firstRowId, secondRow, secondRowId, thirdRow, thir
 		console.log("succes");
 }
 
-/*function checkCorrectAnswer(firstColor, secondColor, thirdColor, fourthColor, fifthColor){
+function checkCorrectAnswer(){
+	if (firstFirstId.style.backgroundColor == "green" && firstSecondId.style.backgroundColor == "green" && firstThirdId.style.backgroundColor == "green" && firstFourthId.style.backgroundColor == "green" && firstFifthId.style.backgroundColor == "green"){
+		var audiogoed = new Audio('Lingogoed.mp3');
+		audiogoed.play();
+	}
+	else{
+		var audio = new Audio('lingo.mp3');
+		audio.play();
+	}
+}
+
+/*function playCorrectSound{
 
 }*/
-
