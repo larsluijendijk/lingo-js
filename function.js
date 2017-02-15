@@ -1,3 +1,4 @@
+var poging = 0;
 var test;
 var word = words[Math.floor(Math.random()*words.length)];
 console.log(word);
@@ -8,20 +9,18 @@ var secondLetter = word.substring(1,2);
 var thirdLetter = word.substring(2,3);
 var fourthLetter = word.substring(3,4);
 var fifthLetter = word.substring(4,5);
-var firstCorrect = document.getElementById("eersteerste").value = firstLetter;
+var firstCorrect = document.getElementById("0,1").value = firstLetter;
+var secondCorrect = document.getElementById("1,1").value = firstLetter;
+var thirdCorrect = document.getElementById("2,1").value = firstLetter;
+var fourthCorrect = document.getElementById("3,1").value = firstLetter;
+var fifthCorrect = document.getElementById("4,1").value = firstLetter;
 var counter = 0;
-var firstFirstId = document.getElementById("eersteerste");
-var firstSecondId = document.getElementById("eersttweede");
-var firstThirdId = document.getElementById("eerstderde");
-var firstFourthId = document.getElementById("eerstvierde");
-var firstFifthId = document.getElementById("eerstvijfde");
-var secondFirstId = document.getElementById("tweedeerste");
-var secondSecondId = document.getElementById("tweedetweede");
-var secondThirdId = document.getElementById("tweedederde");
-var secondFourthId = document.getElementById("tweedevierde");
-var secondFifthId = document.getElementById("tweedevijfde");
-
-
+var firstFirstId = document.getElementById(poging + ",0");
+var firstSecondId = document.getElementById(poging + ",1");
+var firstThirdId = document.getElementById(poging + ",2");
+var firstFourthId = document.getElementById(poging + ",3");
+var firstFifthId = document.getElementById(poging + ",4");
+console.log(firstFifthId);
 
 
 function add() {
@@ -31,40 +30,24 @@ function add() {
 window.onload = function(){
 }
 
-function onClickFirst(){
+function onClick(){
 	document.getElementById("count").innerHTML = add();
-	firstFirst = document.getElementById('eersteerste').value;
-	firstSecond = document.getElementById('eersttweede').value;
-	firstThird = document.getElementById('eerstderde').value;
-	firstFourth = document.getElementById('eerstvierde').value;
-	firstFifth = document.getElementById('eerstvijfde').value;
-	firstFifthColor = document.getElementById('eerstvijfde').style.backgroundColor;
+	firstFirst = document.getElementById(poging + ",1").value;
+	firstSecond = document.getElementById(poging + ",2").value;
+	firstThird = document.getElementById(poging + ",3").value;
+	firstFourth = document.getElementById(poging + ",4").value;
+	firstFifth = document.getElementById(poging + ",5").value;
+	firstFifthColor = document.getElementById('0,5').style.backgroundColor;
 	console.log(firstFirst);
-	checkLetterById(firstLetter, 'eersteerste');
-	checkLetterById(secondLetter, 'eersttweede');
-	checkLetterById(thirdLetter, 'eerstderde');
-	checkLetterById(fourthLetter, 'eerstvierde');
-	checkLetterById(fifthLetter, 'eerstvijfde');
-	disableRow(firstFirst, firstFirstId, firstSecond, firstSecondId, firstThird, firstThirdId, firstFourth, firstFourthId, firstFifth, firstFifthId);
+	checkLetterById(firstLetter, poging + ',1');
+	checkLetterById(secondLetter, poging + ',2');
+	checkLetterById(thirdLetter, poging + ',3');
+	checkLetterById(fourthLetter, poging + ',4');
+	checkLetterById(fifthLetter, poging + ',5');
+	//disableRow(firstFirst, firstFirstId, firstSecond, firstSecondId, firstThird, firstThirdId, firstFourth, firstFourthId, firstFifth, firstFifthId);
+	//checkCorrectAnswer(firstFirstId, firstSecondId, firstThirdId, firstFourthId, firstFifthId)
+	poging ++;
 }
-
-function onClickSecond(){
-	secondFirst = document.getElementById('tweedeerste').value;
-	secondSecond = document.getElementById('tweedetweede').value;
-	secondThird = document.getElementById('tweedederde').value;
-	secondFourth = document.getElementById('tweedevierde').value;
-	secondFifth = document.getElementById('tweedevijfde').value;
-	secondFifthColor = document.getElementById('tweedevijfde').style.backgroundColor;
-	console.log(secondFirst);
-	checkLetterById(firstLetter, 'tweedeerste');
-	checkLetterById(secondLetter, 'tweedetweede');
-	checkLetterById(thirdLetter, 'tweedederde');
-	checkLetterById(fourthLetter, 'tweedevierde');
-	checkLetterById(fifthLetter, 'tweedevijfde');
-	disableRow(secondFirst, secondFirstId, secondSecond, secondSecondId, secondThird, secondThirdId, secondFourth, secondFourthId, secondFifth, secondFifthId);
-}
-
-
 
 
 function checkLetterById(letterToCheck, letterId) {
@@ -94,3 +77,8 @@ function disableRow(firstRow, firstRowId, secondRow, secondRowId, thirdRow, thir
 		console.log("failed");
 	}
 }
+
+/*function checkCorrectAnswer(firstColor, secondColor, thirdColor, fourthColor, fifthColor){
+
+}*/
+
