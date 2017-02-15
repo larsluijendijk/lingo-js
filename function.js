@@ -65,17 +65,12 @@ function checkLetterById(letterToCheck, letterId) {
 
 function disableRow(firstRow, firstRowId, secondRow, secondRowId, thirdRow, thirdRowId, fourthRow, fourthRowId, fifthRow, fifthRowId){
 	// hier gebleven 
-	if(firstRow != "" && secondRow != "" && thirdRow != "" && fourthRow != "" && fifthRow != ""){
 		firstRowId.disabled = true;
 		secondRowId.disabled = true;
 		thirdRowId.disabled = true;
 		fourthRowId.disabled = true;
 		fifthRowId.disabled = true;
 		console.log("succes");
-	}
-	else{
-		console.log("failed");
-	}
 }
 
 /*function checkCorrectAnswer(firstColor, secondColor, thirdColor, fourthColor, fifthColor){
