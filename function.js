@@ -16,6 +16,12 @@ var fourthCorrect = document.getElementById("3,1").value = firstLetter;
 var fifthCorrect = document.getElementById("4,1").value = firstLetter;
 var counter = 0;
 
+window.onkeypress = function(event) {
+   if (event.keyCode == 13) {
+      onClick();
+   }
+}
+
 
 function add() {
     return counter += 1;
@@ -50,7 +56,6 @@ function onClick(){
 	checkCorrectAnswer();
 }
 
-
 function checkLetterById(letterToCheck, letterId) {
 	var letterElement = document.getElementById(letterId);
 	if (letterElement.value == letterToCheck){
@@ -84,7 +89,3 @@ function checkCorrectAnswer(){
 		audio.play();
 	}
 }
-
-/*function playCorrectSound{
-
-}*/
