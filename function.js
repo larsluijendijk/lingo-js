@@ -15,12 +15,6 @@ var thirdCorrect = document.getElementById("2,1").value = firstLetter;
 var fourthCorrect = document.getElementById("3,1").value = firstLetter;
 var fifthCorrect = document.getElementById("4,1").value = firstLetter;
 var counter = 0;
-var firstFirstId = document.getElementById(poging + ",0");
-var firstSecondId = document.getElementById(poging + ",1");
-var firstThirdId = document.getElementById(poging + ",2");
-var firstFourthId = document.getElementById(poging + ",3");
-var firstFifthId = document.getElementById(poging + ",4");
-console.log(firstFifthId);
 
 
 function add() {
@@ -37,6 +31,11 @@ function onClick(){
 	firstThird = document.getElementById(poging + ",3").value;
 	firstFourth = document.getElementById(poging + ",4").value;
 	firstFifth = document.getElementById(poging + ",5").value;
+	firstFirstId = document.getElementById(poging + ",1");
+	firstSecondId = document.getElementById(poging + ",2");
+	firstThirdId = document.getElementById(poging + ",3");
+	firstFourthId = document.getElementById(poging + ",4");
+	firstFifthId = document.getElementById(poging + ",5");
 	firstFifthColor = document.getElementById('0,5').style.backgroundColor;
 	console.log(firstFirst);
 	checkLetterById(firstLetter, poging + ',1');
@@ -44,9 +43,10 @@ function onClick(){
 	checkLetterById(thirdLetter, poging + ',3');
 	checkLetterById(fourthLetter, poging + ',4');
 	checkLetterById(fifthLetter, poging + ',5');
-	//disableRow(firstFirst, firstFirstId, firstSecond, firstSecondId, firstThird, firstThirdId, firstFourth, firstFourthId, firstFifth, firstFifthId);
+	disableRow(firstFirst, firstFirstId, firstSecond, firstSecondId, firstThird, firstThirdId, firstFourth, firstFourthId, firstFifth, firstFifthId);
 	//checkCorrectAnswer(firstFirstId, firstSecondId, firstThirdId, firstFourthId, firstFifthId)
 	poging ++;
+	console.log(firstFirstId);
 }
 
 
