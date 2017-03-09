@@ -1,0 +1,42 @@
+html{
+
+}
+body{
+    background-color: lightblue;
+	padding: 0px;
+	color:white;
+
+}
+div.harambe{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:-20;
+
+}
+div.arnold{
+	width:1000px;
+    background-color: rgba(0, 0, 255, 0.3);
+    margin-left:auto;
+	margin-right:auto;
+
+}
+div.thelegend27{
+	margin-left:auto;
+	margin-right:auto;
+	width:650px;
+}
+img.lingo{
+    width: 540px;
+	height: 130px;
+}
+div.choose{
+	margin-left:auto;
+	margin-right:auto;
+	width: 200px;
+}
+div.check{
+	margin-left:auto;
+	margin-right:auto;
+	width: 200px;
+}
